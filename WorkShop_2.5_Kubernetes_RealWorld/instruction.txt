@@ -31,9 +31,9 @@ Token: XXXXX
 Ingress CNAME: XXXXX
 
 Machine name		            			Roles:			IP Address: (Private)		IP Address: (Public)			Hostname
-Training_DockerZerotoHero_StudentGX_1	   	Master			10.21.1.X					X.X.X.X							ip-10-21-1-X.ap-southeast-1.compute.internal
-Training_DockerZerotoHero_StudentGX_2       NodePort		10.21.1.X					X.X.X.X							ip-10-21-1-X.ap-southeast-1.compute.internal
-Training_DockerZerotoHero_StudentGX_3   	NodePort		10.21.1.X					X.X.X.X							ip-10-21-1-X.ap-southeast-1.compute.internal
+Training_DockerZerotoHero_StudentGX_1	   	Master			10.200.X.X					X.X.X.X							ip-10-200-X-X.ap-southeast-1.compute.internal
+Training_DockerZerotoHero_StudentGX_2       NodePort		10.200.X.X					X.X.X.X							ip-10-200-X-X.ap-southeast-1.compute.internal
+Training_DockerZerotoHero_StudentGX_3   	NodePort		10.200.X.X					X.X.X.X							ip-10-200-X-X.ap-southeast-1.compute.internal
 ===================================================
 (export environment)
   export ClusterName=<clustername>
