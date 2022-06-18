@@ -116,16 +116,12 @@ kubectl create rolebinding rolebindingserviceaccountreadonly \
   --serviceaccount=security:serviceaccount-readonly \
   --namespace=security
 
-3. Check token for service account:
-kubectl get secret -n=security
-kubectl describe secret/serviceaccount-readonly-token-xxxx -n=security
-
-4. Test Service Account by command:
+3. Test Service Account by command:
 kubectl get pods -n security --as system:serviceaccount:security:serviceaccount-readonly
 kubectl get svc -n security --as system:serviceaccount:security:serviceaccount-readonly
 kubectl run webtest --image=labdocker/nginx:http2 --port=443 -n security --as system:serviceaccount:security:serviceaccount-readonly
 
-5. Clearup Lab by command:
+4. Clearup Lab by command:
 kubectl delete rolebinding/rolebindingserviceaccountreadonly -n=security
 kubectl delete -f https://raw.githubusercontent.com/praparn/kubernetes_202205/master/WorkShop_2.4_Security/security-serviceaccount-readonly.yml
 kubectl delete -f https://raw.githubusercontent.com/praparn/kubernetes_202205/master/WorkShop_2.4_Security/security-role-readonly.yml

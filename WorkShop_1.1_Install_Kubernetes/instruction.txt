@@ -1,5 +1,5 @@
 Link for download:
-1. Check LABSheet.xlsx for check information about your machine and your key
+1. Check LABSheet on google drive for check information about your machine and your key
 
 2. Install pre-requiste binary as detail below:
   #Cilium Cli
