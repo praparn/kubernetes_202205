@@ -21,6 +21,21 @@ Note: This instruction will start lab for kubernetes's cluster for real workshop
 	------------------------------------------------------------------------------------------------------------------------------------------------------------------------
     sudo lsmod | grep -e ip_vs -e nf_conntrack_ipv4
 	------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    *Optional3: Check and reinstall cilium binary
+	------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+    #Cilium Cli
+    curl -L --remote-name-all https://github.com/cilium/cilium-cli/releases/latest/download/cilium-linux-amd64.tar.gz{,.sha256sum}
+    sha256sum --check cilium-linux-amd64.tar.gz.sha256sum
+    sudo tar xzvfC cilium-linux-amd64.tar.gz /usr/local/bin
+    rm cilium-linux-amd64.tar.gz{,.sha256sum}
+
+    #Hubble Cli
+    export HUBBLE_VERSION=$(curl -s https://raw.githubusercontent.com/cilium/hubble/master/stable.txt)
+    curl -L --remote-name-all https://github.com/cilium/hubble/releases/download/$HUBBLE_VERSION/hubble-linux-amd64.tar.gz{,.sha256sum}
+    sha256sum --check hubble-linux-amd64.tar.gz.sha256sum
+    sudo tar xzvfC hubble-linux-amd64.tar.gz /usr/local/bin
+    rm hubble-linux-amd64.tar.gz{,.sha256sum}
+	------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 1. Check "LAB" sheet for your group and inform your team for all node information like below:
 ====================================================
