@@ -22,10 +22,10 @@ kubectl get nodes
 ====================================================
 Example Output:
 kubuntu@ip-10-0-1-17:~$ kubectl get nodes
-NAME                                            STATUS   ROLES                  AGE   VERSION
-ip-10-0-1-173.ap-southeast-1.compute.internal   Ready    worker                 22m   v1.23.3
-ip-10-0-1-196.ap-southeast-1.compute.internal   Ready    worker                 19m   v1.23.3
-ip-10-0-1-67.ap-southeast-1.compute.internal    Ready    control-plane,master   38m   v1.23.3
+NAME                                               STATUS   ROLES           AGE     VERSION
+ip-10-200-20-201.ap-southeast-1.compute.internal   Ready    control-plane   29m     v1.24.0
+ip-10-200-21-16.ap-southeast-1.compute.internal    Ready    worker          11m     v1.24.0
+ip-10-200-22-250.ap-southeast-1.compute.internal   Ready    worker          9m53s   v1.24.0
 ====================================================
 
 	kubectl label nodes <name master/control-plane> storage=M2
